@@ -40,9 +40,7 @@
 		</label>
 		<!-- <button on:click={() => inputRef?.click()}>upload</button> -->
 		{#if file && file.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'}
-			<h2>{file.name}</h2>
-			<h3>{file.size} bytes</h3>
-			<button on:click={onProcessFile}>accept</button>
+			<button on:click={onProcessFile}>Convert!</button>
 		{/if}
 	</div>
 </section>
@@ -55,13 +53,13 @@
 		justify-content: center;
 	}
 
+	label {
+		margin-bottom: 2rem;
+	}
+
 	.container {
 		min-width: 800px;
 		display: flex;
 		flex-direction: column;
-	}
-	.container > * + * {
-		margin-top: 100px;
-		background: tomato;
 	}
 </style>

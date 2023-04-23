@@ -58,7 +58,7 @@ export class Converter {
 	): Promise<void> {
 		const newWb = utils.book_new();
 		const ws = utils.json_to_sheet(obj);
-		ws.utils.book_append_sheet(newWb, ws, 'product');
+		utils.book_append_sheet(newWb, ws, 'product');
 		await writeFile(newWb, fileName, { compression });
 	}
 
