@@ -2,6 +2,7 @@ import { read } from 'xlsx';
 import type { TemplateTypes } from '$utils/dictionary';
 import type { Converter } from './converter';
 import Ekman from './ekman';
+import Baru from './baru';
 
 export async function processNow(file: File, templateName: TemplateTypes) {
   let converter: Converter | null;
@@ -12,6 +13,9 @@ export async function processNow(file: File, templateName: TemplateTypes) {
     case 'ekman':
       converter = new Ekman(worbook, templateName);
       break;
+    case 'baru':
+      converter = new Baru(worbook, templateName);
+      break;
     default:
       converter = null;
       break;
@@ -21,5 +25,5 @@ export async function processNow(file: File, templateName: TemplateTypes) {
     return;
   }
 
-  console.log(await converter.processSheet());
+  await converter.processSheet();
 }

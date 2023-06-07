@@ -1,4 +1,4 @@
-export const templateTypes = ['default', 'ekman'] as const;
+export const templateTypes = ['default', 'ekman', 'baru'] as const;
 
 export type TemplateTypes = (typeof templateTypes)[number];
 
@@ -94,6 +94,32 @@ export const dictionary: DictionaryMap = {
 			name: 'namabarang',
 			packaging: 'satuan1',
 			basic_harga_normal: 'hjsual1'
+		}
+	},
+	baru: {
+		startRow: 1,
+		sheetName: 'Sheet1',
+		mappings: {
+			sku_id: 'KODE_BARANG',
+			name: 'NAMA',
+			//other_name: '',
+			barcode: 'KODE_BARCODE',
+			// brand_id: 'e',
+			//brand_name: 'f',
+			category_id: 'KATEGORI',
+			//alias: 'h',
+			//availability: 'i',
+			//status: 'j',
+			packaging: 'SATUAN_1',
+			packaging_amount: 'ISI',
+			basic_harga_normal: 'HPP',
+			basic_harga_diskon: 'HARGA_PARTAI_1'
+			// gold_harga_normal: 'p',
+			// gold_harga_diskon: 'q',
+			// gold_tanggal_kadaluarsa: 'r',
+			// src_harga_normal: 's',
+			// src_harga_diskon: 't',
+			// src_tanggal_kadaluarsa: 'u'}
 		}
 	}
 };

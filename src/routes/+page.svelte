@@ -26,7 +26,7 @@
 
 <section>
 	<div class="container">
-		<Select options={['ekman', 'default']} bind:value={templateName} />
+		<Select options={['ekman', "baru", 'default']} bind:value={templateName} />
 		<label>
 			Template type:
 			<input
